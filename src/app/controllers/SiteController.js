@@ -30,5 +30,5 @@ class SiteController {
         res.render('search');
     }
 }
-
+// KhoaPug 
 module.exports = new SiteController();
