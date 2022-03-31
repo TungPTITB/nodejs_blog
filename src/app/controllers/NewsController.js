@@ -1,14 +1,12 @@
-const res = require('express/lib/response');
-
 class NewsController {
-    //[GET] /news
+    // [GET] /news
     index(req, res) {
         res.render('news');
     }
 
-    //[GET] /news/:slug
+    // [GET] /news/:slug
     show(req, res) {
-        res.send('NEW DETAIL!!!');
+        res.send('NEWS DETAIL!!!');
     }
 }
 
