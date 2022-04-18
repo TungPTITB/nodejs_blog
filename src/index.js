@@ -4,7 +4,10 @@ const morgan = require('morgan');
 const hbs = require('express-handlebars');
 const res = require('express/lib/response');
 const app = express();
-const port = 8000;
+const port = 3000;
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 const route = require('./routes');
 
@@ -25,5 +28,5 @@ app.set('views', path.join(__dirname, 'resources', 'views'));
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening at http:localhost:${port}`);
+    console.log(`App listening at http:localhost:${port}`);
 });
